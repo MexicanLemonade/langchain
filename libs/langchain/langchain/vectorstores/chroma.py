@@ -98,7 +98,7 @@ class Chroma(VectorStore):
                 major, minor, _ = chromadb.__version__.split(".")
                 if int(major) == 0 and int(minor) < 4:
                     _client_settings = chromadb.config.Settings(
-                        chroma_db_impl="duckdb+parquet",
+                        # chroma_db_impl="duckdb+parquet",
                     )
                 else:
                     _client_settings = chromadb.config.Settings(is_persistent=True)
